@@ -1,0 +1,22 @@
+
+{
+  "name": "Landing-Page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --base=/Landing-Page/",
+    "preview": "vite preview --base=/Landing-Page/"
+  },
+  "devDependencies": {
+    "alpinejs": "^3.15.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "vite": "^7.1.6"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.13"
+  }
+}
