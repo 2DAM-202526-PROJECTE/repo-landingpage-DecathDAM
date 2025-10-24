@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- 🔹 Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="text-2xl font-bold text-blue-600">DECATHDAM</div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="Deport.html" class="hover:text-blue-500">Deport</a>
+        <a href="Equipament.html" class="hover:text-blue-500">Equipament</a>
+        <a href="Nutricio.html" class="hover:text-blue-500">Nutrició i salut</a>
+        <a href="Ofertes.html" class="hover:text-blue-500">Ofertes</a>
+      </nav>
+      <div class="md:hidden text-2xl cursor-pointer">☰</div>
+    </div>
+  </header>
+
+  <!-- 🔹 Contingut principal -->
+  <main class="pt-24 px-6 py-10 max-w-7xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+      <h1 class="text-3xl font-semibold capitalize">Publicacions recents</h1>
+      <button class="focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 transition-colors duration-300 transform hover:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+      </button>
+    </div>
+
+    <hr class="my-8 border-gray-200">
+
+    <!-- 🔹 Grid de posts -->
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+
+      <!-- Post 1 -->
+      <div>
+        <img class="object-cover w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?auto=format&fit=crop&w=1470&q=80" alt="">
+        <div class="mt-6">
+          <span class="text-blue-500 uppercase">category</span>
+          <h2 class="mt-2 text-xl font-semibold">What do you want to know about UI</h2>
+          <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <div class="flex items-center justify-between mt-4">
+            <div>
+              <a href="#" class="text-lg font-medium hover:underline">John Snow</a>
+              <p class="text-sm text-gray-500">February 1, 2022</p>
+            </div>
+            <a href="#" class="text-blue-500 underline hover:text-blue-400">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 2 -->
+      <div>
+        <img class="object-cover w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1470&q=80" alt="">
+        <div class="mt-6">
+          <span class="text-blue-500 uppercase">category</span>
+          <h2 class="mt-2 text-xl font-semibold">All the features you want to know</h2>
+          <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <div class="flex items-center justify-between mt-4">
+            <div>
+              <a href="#" class="text-lg font-medium hover:underline">Arthur Melo</a>
+              <p class="text-sm text-gray-500">February 6, 2022</p>
+            </div>
+            <a href="#" class="text-blue-500 underline hover:text-blue-400">Read more</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post 3 -->
+      <div>
+        <img class="object-cover w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?auto=format&fit=crop&w=1374&q=80" alt="">
+        <div class="mt-6">
+          <span class="text-blue-500 uppercase">category</span>
+          <h2 class="mt-2 text-xl font-semibold">Which services you get from Meraki UI</h2>
+          <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <div class="flex items-center justify-between mt-4">
+            <div>
+              <a href="#" class="text-lg font-medium hover:underline">Tom Hank</a>
+              <p class="text-sm text-gray-500">February 19, 2022</p>
+            </div>
+            <a href="#" class="text-blue-500 underline hover:text-blue-400">Read more</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
