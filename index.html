@@ -1,39 +1,86 @@
 <!DOCTYPE html>
-<html lang="es">
- <head>
+<html lang="ca">
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing Page</title>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>DECATHDAM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-<body class="bg-gray-100 dark:bg-gray-900">
-   <header class="navbar">
-  <div class="logo">DECATHDAM</div>
-  <nav class="menu">
-    <a href="Deport.html">Deport</a>
-    <a href="Equipament.html">Equipament</a>
-    <a href="Nutricio.html">Nutrició i salut</a>
-    <a href="Ofertes.html">Ofertes</a>
-  </nav>
-  <div class="menu-icon">☰</div>
-</header>
 
+  <body class="bg-gradient-to-br from-white to-purple-50 text-gray-900 min-h-screen flex flex-col">
+    <!-- Navbar -->
+    <header class="flex items-center justify-between px-6 py-4 shadow-sm">
+      <div class="text-2xl font-bold text-indigo-900">
+        <a href="index.html">DECATHDAM</a>
+      </div>
 
-    <section class="fixed max-w-md p-4 mx-auto bg-white border border-gray-200 dark:bg-gray-800 left-12 bottom-16 dark:border-gray-700 rounded-2xl">
-    <h2 class="font-semibold text-gray-800 dark:text-white">🍪 Cookie Notice</h2>
+      <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+        <a href="Deport.html" class="hover:text-indigo-700">Deportes</a>
+        <a href="Equipament.html" class="hover:text-indigo-700">Equipament</a>
+        <a href="Nutricio.html" class="hover:text-indigo-700">Nutrició i salut</a>
+        <a href="Ofertes.html" class="hover:text-indigo-700">Ofertes</a>
+      </nav>
 
-    <p class="mt-4 text-sm text-gray-600 dark:text-gray-300">We use cookies to ensure that we give you the best experience on our website. <a href="#" class="text-blue-500 hover:underline">Read cookies policies</a>. </p>
-    
-    <div class="flex items-center justify-between mt-4 gap-x-4 shrink-0">
-        <button class="text-xs text-gray-800 underline transition-colors duration-300 dark:text-white dark:hover:text-gray-400 hover:text-gray-600 focus:outline-none">
-            Manage your preferences
-        </button>
+    </header>
 
-        <button class=" text-xs bg-gray-900 font-medium rounded-lg hover:bg-gray-700 text-white px-4 py-2.5 duration-300 transition-colors focus:outline-none">
-            Accept
-        </button>
+    <!-- Hero section -->
+    <main class="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-16 flex-grow">
+      <!-- Text -->
+      <div class="max-w-4xl w-full space-y-6 text-center md:text-left bg-gradient-to-br from-gray-900 to-indigo-950 p-10 rounded-2xl shadow-lg mx-auto">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+          No expliquis els dies,<br />
+          fes que els dies expliquin
+        </h1>
+      
+        <p class="text-gray-300 text-lg md:text-xl">
+          “Lleuger, resistent i fiable: cada accessori pensat perquè gaudeixis del camí sense
+          preocupacions.”
+        </p>
+      
+        <a
+          href="#"
+          class="inline-block px-6 py-3 rounded-full border border-indigo-400 text-indigo-400 font-semibold hover:bg-indigo-500 hover:text-white transition">
+          Participa
+        </a>
+      </div>
+      
+      
+
+    <!-- Decorative Chart -->
+    <div class="relative mt-12 md:mt-0 md:w-1/2 flex justify-center">
+    <div class="bg-gradient-to-br from-gray-900 to-indigo-950 rounded-2xl shadow-lg p-8 w-full max-w-2xl">
+      <!-- Simulated line -->
+      <svg viewBox="0 0 600 240" class="w-full h-64 text-white">
+        <polyline
+          fill="none"
+          stroke="currentColor"
+          stroke-width="4"
+          points="40,200 180,140 320,160 460,80 580,100"
+        />
+      </svg>
+  
+      <!-- Year bubbles -->
+      <div class="flex justify-between -mt-10">
+        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
+          <div class="font-bold">2021</div>
+          <div class="text-gray-300 text-sm">Salut</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
+          <div class="font-bold">2022</div>
+          <div class="text-gray-300 text-sm">Dades</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
+          <div class="font-bold">2023</div>
+          <div class="text-gray-300 text-sm">Resultats</div>
+        </div>
+      </div>
     </div>
-</section>
-    <script type="module" src="/src/main.js"></script>
-</body>
+  </div>
+  
+
+
+
+
+    </main>
+  </body>
 </html>
