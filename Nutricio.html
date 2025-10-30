@@ -1,97 +1,308 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Page</title>
+  <title>Nutrició i Salut - DECATHDAM</title>
+  <meta name="description" content="Descobreix la nostra gamma completa de productes de nutrició esportiva i salut. Suplementació, proteïnes, vitamines i molt més.">
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
   <!-- 🔹 Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-      <div class="text-2xl font-bold text-blue-600">DECATHDAM</div>
-      <nav class="hidden md:flex space-x-6">
-        <a href="Deport.html" class="hover:text-blue-500">Deport</a>
-        <a href="Equipament.html" class="hover:text-blue-500">Equipament</a>
-        <a href="Nutricio.html" class="hover:text-blue-500">Nutrició i salut</a>
-        <a href="Ofertes.html" class="hover:text-blue-500">Ofertes</a>
-      </nav>
-      <div class="md:hidden text-2xl cursor-pointer">☰</div>
-    </div>
+  <header class="navbar">
+    <div class="logo">DECATHDAM</div>
+    <nav class="menu">
+      <a href="Deport.html">Deport</a>
+      <a href="Equipament.html">Equipament</a>
+      <a href="Nutricio.html">Nutrició i salut</a>
+      <a href="Ofertes.html">Ofertes</a>
+    </nav>
+    <div class="menu-icon">☰</div>
   </header>
 
-  <!-- 🔹 Contingut principal -->
-  <main class="pt-24 px-6 py-10 max-w-7xl mx-auto">
-    <div class="flex items-center justify-between mb-6">
-      <h1 class="text-3xl font-semibold capitalize">Publicacions recents</h1>
-      <button class="focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-600 transition-colors duration-300 transform hover:text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg>
-      </button>
+  <!-- 🔹 Hero Section -->
+  <section class="relative bg-gradient-to-r from-green-400 to-blue-500 text-white pt-32 pb-20 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Nutrició i Salut</h1>
+          <p class="text-lg md:text-xl mb-6 text-white/90">Alimenta el teu rendiment amb la nostra gamma de productes nutricionals</p>
+          <p class="text-base mb-8 text-white/80">Descobreix suplementació esportiva de qualitat, proteïnes, vitamines i snacks saludables per assolir els teus objectius.</p>
+          <a href="#productes" class="inline-block bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Explorar Productes</a>
+        </div>
+        <div class="hidden md:flex justify-center">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 w-full max-w-md">
+            <div class="space-y-4">
+              <div class="flex items-center space-x-4">
+                <div class="bg-white/20 rounded-full p-3">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">Plans personalitzats</h3>
+                  <p class="text-sm text-white/80">Adaptats al teu estil de vida</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="bg-white/20 rounded-full p-3">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">Qualitat certificada</h3>
+                  <p class="text-sm text-white/80">Productes testats i verificats</p>
+                </div>
+              </div>
+              <div class="flex items-center space-x-4">
+                <div class="bg-white/20 rounded-full p-3">
+                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-lg">Assessorament expert</h3>
+                  <p class="text-sm text-white/80">Consells de professionals</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <hr class="my-8 border-gray-200">
-
-    <!-- 🔹 Grid de posts -->
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
-
-      <!-- Post 1 -->
-      <div>
-        <img class="object-cover w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1624996379697-f01d168b1a52?auto=format&fit=crop&w=1470&q=80" alt="">
-        <div class="mt-6">
-          <span class="text-blue-500 uppercase">category</span>
-          <h2 class="mt-2 text-xl font-semibold">What do you want to know about UI</h2>
-          <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <div class="flex items-center justify-between mt-4">
-            <div>
-              <a href="#" class="text-lg font-medium hover:underline">John Snow</a>
-              <p class="text-sm text-gray-500">February 1, 2022</p>
-            </div>
-            <a href="#" class="text-blue-500 underline hover:text-blue-400">Read more</a>
-          </div>
-        </div>
+  <!-- 🔹 Categories Section -->
+  <section id="productes" class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Categories de Productes</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Troba tot el que necessites per optimitzar el teu rendiment i millorar la teva salut</p>
       </div>
 
-      <!-- Post 2 -->
-      <div>
-        <img class="object-cover w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=1470&q=80" alt="">
-        <div class="mt-6">
-          <span class="text-blue-500 uppercase">category</span>
-          <h2 class="mt-2 text-xl font-semibold">All the features you want to know</h2>
-          <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <div class="flex items-center justify-between mt-4">
-            <div>
-              <a href="#" class="text-lg font-medium hover:underline">Arthur Melo</a>
-              <p class="text-sm text-gray-500">February 6, 2022</p>
-            </div>
-            <a href="#" class="text-blue-500 underline hover:text-blue-400">Read more</a>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Category 1 -->
+        <div class="group bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 hover:shadow-xl transition duration-300 cursor-pointer">
+          <div class="bg-purple-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition duration-300">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
+            </svg>
           </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Proteïnes</h3>
+          <p class="text-gray-600 text-sm mb-4">Whey, casei, veganes i més per al creixement muscular</p>
+          <span class="text-purple-600 font-semibold text-sm group-hover:underline">Veure més →</span>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="group bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 hover:shadow-xl transition duration-300 cursor-pointer">
+          <div class="bg-green-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition duration-300">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Vitamines</h3>
+          <p class="text-gray-600 text-sm mb-4">Multivitamínics, omega-3 i complements essencials</p>
+          <span class="text-green-600 font-semibold text-sm group-hover:underline">Veure més →</span>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="group bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 hover:shadow-xl transition duration-300 cursor-pointer">
+          <div class="bg-orange-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition duration-300">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Energia</h3>
+          <p class="text-gray-600 text-sm mb-4">Pre-entrenos, gels energètics i begudes isotòniques</p>
+          <span class="text-orange-600 font-semibold text-sm group-hover:underline">Veure més →</span>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="group bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 hover:shadow-xl transition duration-300 cursor-pointer">
+          <div class="bg-blue-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition duration-300">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
+              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.5 6a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Snacks Saludables</h3>
+          <p class="text-gray-600 text-sm mb-4">Barretes proteiques, fruits secs i opcions sanes</p>
+          <span class="text-blue-600 font-semibold text-sm group-hover:underline">Veure més →</span>
         </div>
       </div>
-
-      <!-- Post 3 -->
-      <div>
-        <img class="object-cover w-full h-64 rounded-lg lg:h-80" src="https://images.unsplash.com/photo-1597534458220-9fb4969f2df5?auto=format&fit=crop&w=1374&q=80" alt="">
-        <div class="mt-6">
-          <span class="text-blue-500 uppercase">category</span>
-          <h2 class="mt-2 text-xl font-semibold">Which services you get from Meraki UI</h2>
-          <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-          <div class="flex items-center justify-between mt-4">
-            <div>
-              <a href="#" class="text-lg font-medium hover:underline">Tom Hank</a>
-              <p class="text-sm text-gray-500">February 19, 2022</p>
-            </div>
-            <a href="#" class="text-blue-500 underline hover:text-blue-400">Read more</a>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </main>
+  </section>
+
+  <!-- 🔹 Featured Products Section -->
+  <section class="py-16 px-6 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-8">
+        <h2 class="text-3xl font-bold text-gray-800">Productes Destacats</h2>
+        <a href="#" class="text-blue-600 hover:text-blue-700 font-semibold hidden md:block">Veure tots →</a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="bg-gradient-to-br from-purple-400 to-purple-600 h-48 flex items-center justify-center">
+            <div class="text-white text-center">
+              <svg class="w-20 h-20 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"></path>
+              </svg>
+              <p class="text-sm font-semibold">PROTEÏNA WHEY</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full">BEST SELLER</span>
+              <div class="flex items-center text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path>
+                </svg>
+                <span class="text-gray-600 text-sm ml-1">4.8</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Whey Protein Isolate</h3>
+            <p class="text-gray-600 text-sm mb-4">Proteïna d'alt valor biològic amb 25g per servei. Ideal per recuperació muscular.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-gray-800">34,99€</span>
+                <span class="text-sm text-gray-500 line-through ml-2">44,99€</span>
+              </div>
+              <button class="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition duration-300">Afegir</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="bg-gradient-to-br from-green-400 to-green-600 h-48 flex items-center justify-center">
+            <div class="text-white text-center">
+              <svg class="w-20 h-20 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd"></path>
+              </svg>
+              <p class="text-sm font-semibold">MULTIVITAMÍNIC</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full">RECOMANAT</span>
+              <div class="flex items-center text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path>
+                </svg>
+                <span class="text-gray-600 text-sm ml-1">4.6</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Daily Multivitamin Plus</h3>
+            <p class="text-gray-600 text-sm mb-4">Complex vitamínic complet amb minerals essencials per al dia a dia.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-gray-800">19,99€</span>
+              </div>
+              <button class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">Afegir</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
+          <div class="bg-gradient-to-br from-orange-400 to-orange-600 h-48 flex items-center justify-center">
+            <div class="text-white text-center">
+              <svg class="w-20 h-20 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+              </svg>
+              <p class="text-sm font-semibold">PRE-ENTRENO</p>
+            </div>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="bg-orange-100 text-orange-600 text-xs font-semibold px-3 py-1 rounded-full">NOU</span>
+              <div class="flex items-center text-yellow-400">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z"></path>
+                </svg>
+                <span class="text-gray-600 text-sm ml-1">4.9</span>
+              </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Energy Boost Pre-Workout</h3>
+            <p class="text-gray-600 text-sm mb-4">Màxima energia i concentració per als teus entrenaments més intensos.</p>
+            <div class="flex items-center justify-between">
+              <div>
+                <span class="text-2xl font-bold text-gray-800">29,99€</span>
+              </div>
+              <button class="bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition duration-300">Afegir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Benefits Section -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Per què triar DECATHDAM?</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Compromesos amb la teva salut i rendiment esportiu</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Qualitat Garantida</h3>
+          <p class="text-gray-600">Tots els nostres productes estan certificats i testats per assegurar la màxima qualitat.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"></path>
+              <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Enviament Ràpid</h3>
+          <p class="text-gray-600">Rebràs els teus productes en 24-48h. Enviament gratuït en comandes superiors a 50€.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Assessorament Expert</h3>
+          <p class="text-gray-600">El nostre equip de nutricionistes està disponible per ajudar-te a triar els millors productes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 CTA Section -->
+  <section class="py-16 px-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Comença avui el teu canvi</h2>
+      <p class="text-lg md:text-xl mb-8 text-white/90">Uneix-te a milers d'atletes que ja confien en DECATHDAM per assolir els seus objectius</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="#productes" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 w-full sm:w-auto">Explorar Productes</a>
+        <a href="#" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition duration-300 w-full sm:w-auto">Contacta'ns</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🔹 Footer -->
+  <footer class="bg-gray-800 text-white py-8 px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <p class="text-gray-400">© 2025 DECATHDAM. Tots els drets reservats.</p>
+    </div>
+  </footer>
 
   <script type="module" src="/src/main.js"></script>
 </body>
