@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DECATHDAM</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Linia per a poder afegir les imatges de les xarxes socials -->
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
   </head>
 
-  <body class="bg-gradient-to-br from-white to-purple-50 text-gray-900 min-h-screen flex flex-col">
+   <!-- FONS SÒLID FOSC -->
+   <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
     <!-- Navbar -->
     <header class="flex items-center justify-between px-10 md:px-20 py-4 shadow-sm bg-gradient-to-br from-gray-900 to-indigo-950">
       <div class="text-3xl md:text-4xl font-bold text-white">
         <a href="index.html">DECATHDAM</a>
       </div>
-    
       <nav class="hidden md:flex space-x-8 text-lg md:text-xl text-white font-medium">
         <a href="Deport.html" class="hover:text-indigo-300">Deportes</a>
         <a href="Equipament.html" class="hover:text-indigo-300">Equipament</a>
@@ -25,9 +30,9 @@
     
 
     <!-- Hero section -->
-    <main class="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-16 flex-grow">
+    <main class="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-10 md:py-12 flex-grow mt-12">
       <!-- Text -->
-      <div class="max-w-4xl w-full space-y-6 text-center md:text-left bg-gradient-to-br from-gray-900 to-indigo-950 p-10 rounded-2xl shadow-lg mx-auto">
+      <div class="max-w-4xl w-full space-y-6 text-center md:text-left bg-gradient-to-br from-gray-900 to-indigo-950 p-10 rounded-2xl shadow-lg mx-auto -mt-8">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
           No expliquis els dies,<br/>
           fes que els dies expliquin
@@ -45,43 +50,248 @@
         </a>
       </div>
       
+      <!-- Decorative Chart -->
+      <div class="relative mt-8 md:mt-0 md:w-1/2 flex justify-center -translate-y-6">
+        <div class="bg-gradient-to-br from-gray-900 to-indigo-950 rounded-2xl shadow-lg p-8 w-full max-w-2xl">
+          <!-- Simulated line -->
+          <svg viewBox="0 0 600 240" class="w-full h-64 text-white">
+            <polyline
+              fill="none"
+              stroke="currentColor"
+              stroke-width="4"
+              points="40,200 180,140 320,160 460,80 580,100"
+            />
+          </svg>
       
+          <!-- Year bubbles -->
+          <div class="flex justify-between -mt-10">
+            <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
+              <div class="font-bold">2021</div>
+              <div class="text-gray-300 text-sm">Salut</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
+              <div class="font-bold">2022</div>
+              <div class="text-gray-300 text-sm">Dades</div>
+            </div>
+            <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
+              <div class="font-bold">2023</div>
+              <div class="text-gray-300 text-sm">Resultats</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
 
-    <!-- Decorative Chart -->
-    <div class="relative mt-12 md:mt-0 md:w-1/2 flex justify-center">
-    <div class="bg-gradient-to-br from-gray-900 to-indigo-950 rounded-2xl shadow-lg p-8 w-full max-w-2xl">
-      <!-- Simulated line -->
-      <svg viewBox="0 0 600 240" class="w-full h-64 text-white">
-        <polyline
-          fill="none"
-          stroke="currentColor"
-          stroke-width="4"
-          points="40,200 180,140 320,160 460,80 580,100"
-        />
-      </svg>
-  
-      <!-- Year bubbles -->
-      <div class="flex justify-between -mt-10">
-        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
-          <div class="font-bold">2021</div>
-          <div class="text-gray-300 text-sm">Salut</div>
+      <!-- SECCIÓ INFORMACIÓ EMPRESA -->
+    <section class="px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
+      <div class="max-w-5xl mx-auto text-center md:text-left space-y-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Sobre la nostra empresa</h2>
+        <p class="text-lg md:text-xl leading-relaxed text-justify">
+          A <span class="font-semibold text-indigo-300">DECATHDAM</span> treballem cada dia per apropar l’esport a tothom. 
+          La nostra missió és oferir productes de qualitat, duradors i sostenibles que t’ajudin a gaudir del teu camí,
+          sigui quin sigui el teu nivell o objectiu. Ens mou la passió per la innovació, la sostenibilitat i el benestar.
+        </p>
+        <p class="text-lg md:text-xl leading-relaxed text-justify">
+          Amb anys d’experiència en el sector, el nostre equip combina coneixement tècnic, amor per l’activitat física 
+          i un compromís constant amb el medi ambient. Creiem que cada aventura comença amb una bona preparació, 
+          i volem ser al teu costat en cada pas.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECCIÓ EQUIP -->
+<section class="px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
+  <div class="max-w-6xl mx-auto text-center space-y-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-white">Coneix el nostre equip</h2>
+    <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto text-justify">
+      Darrere de <span class="font-semibold text-indigo-300">DECATHDAM</span> hi ha dues persones apassionades per l’esport,
+      la tecnologia i el disseny web. Ens agrada combinar creativitat i precisió per oferir una experiència única als usuaris.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+      <!-- Perfil 1 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/150" alt="Foto membre 1" class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
+        <h3 class="text-2xl font-bold text-white">Marc Torres</h3>
+        <p class="text-indigo-300 font-medium mb-4">Dissenyador i desenvolupador web</p>
+        <p class="text-gray-400 text-justify">
+          En Marc és un apassionat del codi i l’estètica digital. Li encanta donar vida a idees a través del disseny 
+          i crear interfícies modernes, intuïtives i atractives. Sempre busca noves formes de millorar l’experiència d’usuari.
+        </p>
+      </div>
+
+      <!-- Perfil 2 -->
+      <div class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
+        <img src="https://via.placeholder.com/150" alt="Foto membre 2" class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
+        <h3 class="text-2xl font-bold text-white">Laura Vidal</h3>
+        <p class="text-indigo-300 font-medium mb-4">Gestora de continguts i comunicació</p>
+        <p class="text-gray-400 text-justify">
+          La Laura aporta la seva passió per la comunicació i el contingut digital. Li agrada explicar històries 
+          que connectin amb les persones i donar una veu pròpia a cada projecte. La seva energia i creativitat impulsen cada pas del camí.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECCIÓ: CONTINGUT DE LA NOSTRA WEB -->
+<section class="px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-6">Descobreix què trobaràs a DECATHDAM</h2>
+    <p class="max-w-3xl mx-auto text-center text-gray-400 mb-10">
+      Els nostres principals apartats t’ajuden a cuidar-te, entrenar millor i gaudir més del teu esport.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- APARTAT 1: DEPORTS -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+        <img src="https://images.unsplash.com/photo-1517649763962-0c623066013b" alt="Deports" class="w-full h-36 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-white mb-3">Deports</h3>
+        <button class="toggle-btn px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">Més informació</button>
+        <div class="toggle-content mt-4 hidden text-left text-gray-300">
+          <p class="mb-2">
+            Explora una àmplia gamma de disciplines: des de running i ciclisme fins a esports d’aigua o muntanya.
+          </p>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>Guies d’iniciació i entrenaments</li>
+            <li>Consells tècnics i d’equipament</li>
+            <li>Recomanacions de productes per cada nivell</li>
+          </ul>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
-          <div class="font-bold">2022</div>
-          <div class="text-gray-300 text-sm">Dades</div>
+      </div>
+
+      <!-- APARTAT 2: EQUIPAMENT -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438" alt="Equipament" class="w-full h-36 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-white mb-3">Equipament</h3>
+        <button class="toggle-btn px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">Més informació</button>
+        <div class="toggle-content mt-4 hidden text-left text-gray-300">
+          <p class="mb-2">
+            Productes resistents, lleugers i fiables per a cada activitat esportiva i necessitat personal.
+          </p>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>Comparatives de marques i materials</li>
+            <li>Accessoris innovadors</li>
+            <li>Consells de manteniment i ús</li>
+          </ul>
         </div>
-        <div class="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 text-center text-base text-white border border-white/20">
-          <div class="font-bold">2023</div>
-          <div class="text-gray-300 text-sm">Resultats</div>
+      </div>
+
+      <!-- APARTAT 3: NUTRICIÓ I SALUT -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d" alt="Nutrició i Salut" class="w-full h-36 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-white mb-3">Nutrició i Salut</h3>
+        <button class="toggle-btn px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">Més informació</button>
+        <div class="toggle-content mt-4 hidden text-left text-gray-300">
+          <p class="mb-2">
+            Aprèn a cuidar-te amb receptes saludables, complements esportius i hàbits que potencien el teu rendiment.
+          </p>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>Guies d’alimentació equilibrada</li>
+            <li>Plans nutricionals segons esport</li>
+            <li>Recomanacions de recuperació i descans</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- APARTAT 4: OFERTES -->
+      <div class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+        <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702" alt="Ofertes" class="w-full h-36 object-cover rounded-lg mb-4">
+        <h3 class="text-xl font-semibold text-white mb-3">Ofertes</h3>
+        <button class="toggle-btn px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">Més informació</button>
+        <div class="toggle-content mt-4 hidden text-left text-gray-300">
+          <p class="mb-2">
+            No et perdis les últimes promocions, descomptes especials i packs esportius per a totes les temporades.
+          </p>
+          <ul class="list-disc list-inside text-gray-400">
+            <li>Ofertes exclusives per membres</li>
+            <li>Promocions setmanals i temporals</li>
+            <li>Avantatges per compres recurrents</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  
+</section>
 
 
 
 
-    </main>
-  </body>
+
+
+</body>
+
+
+  <!-- FOOTER -->
+<footer class="bg-gray-950 text-gray-300 py-12 px-8 md:px-20">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <!-- Secció 1: Logo i descripció -->
+    <div>
+      <h3 class="text-2xl font-bold text-white mb-3">DECATHDAM</h3>
+      <p class="text-gray-400 text-justify">
+        A DECATHDAM treballem per apropar l’esport i la salut a tothom. Ens mou la passió per la innovació, 
+        el benestar i la sostenibilitat. Uneix-te a nosaltres i viu el teu camí esportiu amb energia.
+      </p>
+    </div>
+
+    <!-- Secció 2: Contacte -->
+    <div>
+      <h4 class="text-xl font-semibold text-white mb-3">Contacte</h4>
+      <ul class="space-y-2 text-gray-400">
+        <li><span class="font-semibold text-indigo-300">Email:</span> info@decathdam.com</li>
+        <li><span class="font-semibold text-indigo-300">Telèfon:</span> +34 678 123 456</li>
+        <li><span class="font-semibold text-indigo-300">Adreça:</span> Carrer de l’Esport, 42 - Barcelona</li>
+      </ul>
+    </div>
+
+    <!-- Secció 3: Xarxes socials -->
+    <div>
+      <h4 class="text-xl font-semibold text-white mb-3">Segueix-nos</h4>
+      <div class="flex space-x-4">
+        <a href="https://www.facebook.com/" class="text-gray-400 hover:text-indigo-400 transition"><i class="fab fa-facebook text-2xl"></i></a>
+        <a href="https://www.instagram.com/" class="text-gray-400 hover:text-indigo-400 transition"><i class="fab fa-instagram text-2xl"></i></a>
+        <a href="https://x.com/" class="text-gray-400 hover:text-indigo-400 transition"><i class="fab fa-twitter text-2xl"></i></a>
+        <a href="https://es.linkedin.com/" class="text-gray-400 hover:text-indigo-400 transition"><i class="fab fa-linkedin text-2xl"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Línia separadora -->
+  <div class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+    <p>© 2025 DECATHDAM. Tots els drets reservats.</p>
+    <div class="flex space-x-6 mt-3 md:mt-0">
+      <a href="#" class="hover:text-indigo-300 transition">Política de privacitat</a>
+      <a href="#" class="hover:text-indigo-300 transition">Cookies</a>
+      <a href="#" class="hover:text-indigo-300 transition">Termes d’ús</a>
+    </div>
+  </div>
+</footer>
+
 </html>
+
+<!-- SCRIPT per animar el desplegable -->
+<script>
+  const buttons = document.querySelectorAll('.toggle-btn');
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      const content = button.nextElementSibling;
+      content.classList.toggle('hidden');
+      content.classList.toggle('animate-fadeIn');
+    });
+  });
+</script>
+
+<!-- Animació CSS -->
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+</style>
