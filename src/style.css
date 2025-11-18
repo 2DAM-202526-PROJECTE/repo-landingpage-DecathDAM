@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f5f5f5;
+/*  background: #f5f5f5; */
 }
 
 .navbar {
@@ -66,3 +66,7 @@ body {
   animation: fadeIn 0.3s ease-in-out;
 }
 html { scroll-behavior: smooth; }
+
+[x-cloak] { 
+  display: none !important; 
+}
