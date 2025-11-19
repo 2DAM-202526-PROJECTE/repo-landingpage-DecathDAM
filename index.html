@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DECATHDAM</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  
+
   <!--Linia per a afegir les rets socials-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
-  
+
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
-  
+
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
 </head>
 
@@ -24,8 +24,9 @@
   <nav x-data="{ isOpen: false }" class="relative bg-gray-900 shadow-2xl z-50 border-b border-gray-800">
     <div class="container px-8 py-8 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
-        
-        <a href="index.html" class="text-4xl font-extrabold text-white tracking-wide hover:text-indigo-500 transition-colors duration-300">
+
+        <a href="index.html"
+          class="text-4xl font-extrabold text-white tracking-wide hover:text-indigo-500 transition-colors duration-300">
           DECATHDAM
         </a>
 
@@ -33,7 +34,7 @@
           <button x-cloak @click="isOpen = !isOpen" type="button"
             class="text-white hover:text-indigo-400 focus:outline-none transform hover:scale-110 transition duration-200"
             aria-label="toggle menu">
-            
+
             <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
               stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
@@ -49,7 +50,7 @@
 
       <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 py-6' : 'opacity-0 -translate-x-full']"
         class="absolute inset-x-0 z-20 w-full px-6 transition-all duration-300 ease-in-out bg-gray-900 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
-        
+
         <div class="flex flex-col md:flex-row md:mx-6 space-y-6 md:space-y-0 md:space-x-10 font-bold text-xl">
           <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
             href="Deport.html">Deport</a>
@@ -68,7 +69,8 @@
   <section class="relative h-screen w-full overflow-hidden" id="hero">
     <!-- Contenidor d’imatges -->
     <div class="absolute inset-0 transition-opacity duration-1000" id="slide1">
-      <img src="/src/assets/deport.jpeg" alt="Esports" class="w-full h-full object-cover opacity-90">
+      <img src="/src/assets/deport.jpeg" alt="Esports" class="w-full h-full object-cover opacity-90"
+        fetchpriority="high" loading="eager">
     </div>
 
     <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" id="slide2">
@@ -116,16 +118,17 @@
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <div x-data="{ open: false }" class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+
+        <div x-data="{ open: false }"
+          class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
           <img src="/src/assets/deport.jpeg" alt="Deports" class="w-full h-36 object-cover rounded-lg mb-4">
           <h3 class="text-xl font-semibold text-white mb-3">Deports</h3>
-          
-          <button @click="open = !open" 
+
+          <button @click="open = !open"
             class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">
             <span x-text="open ? 'Menys informació' : 'Més informació'"></span>
           </button>
-          
+
           <div x-show="open" x-collapse class="mt-4 text-left text-gray-300">
             <p class="mb-2">
               Explora una àmplia gamma de disciplines: des de running i ciclisme fins a esports d’aigua o muntanya.
@@ -138,15 +141,16 @@
           </div>
         </div>
 
-        <div x-data="{ open: false }" class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+        <div x-data="{ open: false }"
+          class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
           <img src="/src/assets/equipament.jpeg" alt="Equipament" class="w-full h-36 object-cover rounded-lg mb-4">
           <h3 class="text-xl font-semibold text-white mb-3">Equipament</h3>
-          
-          <button @click="open = !open" 
+
+          <button @click="open = !open"
             class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">
             <span x-text="open ? 'Menys informació' : 'Més informació'"></span>
           </button>
-          
+
           <div x-show="open" x-collapse class="mt-4 text-left text-gray-300">
             <p class="mb-2">
               Productes resistents, lleugers i fiables per a cada activitat esportiva i necessitat personal.
@@ -159,15 +163,16 @@
           </div>
         </div>
 
-        <div x-data="{ open: false }" class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
+        <div x-data="{ open: false }"
+          class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
           <img src="/src/assets/nutricio.jpeg" alt="Nutrició i Salut" class="w-full h-36 object-cover rounded-lg mb-4">
           <h3 class="text-xl font-semibold text-white mb-3">Nutrició i Salut</h3>
-          
-          <button @click="open = !open" 
+
+          <button @click="open = !open"
             class="px-5 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-500 transition focus:outline-none">
             <span x-text="open ? 'Menys informació' : 'Més informació'"></span>
           </button>
-          
+
           <div x-show="open" x-collapse class="mt-4 text-left text-gray-300">
             <p class="mb-2">
               Aprèn a cuidar-te amb receptes saludables, complements esportius i hàbits que potencien el teu rendiment.
@@ -183,7 +188,7 @@
       </div>
 
 
-      </div>
+    </div>
     </div>
   </section>
 
@@ -228,7 +233,8 @@
         <!-- Perfil 1 -->
         <div
           class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
-          <img src="src/assets/ayrton-senna-perfil.png" alt="Foto membre 1" class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
+          <img src="src/assets/ayrton-senna-perfil.png" alt="Foto membre 1"
+            class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
           <h3 class="text-2xl font-bold text-white">Pau Codorniu Duran</h3>
           <p class="text-indigo-300 font-medium mb-4">Dissenyador i desenvolupador web</p>
           <p class="text-gray-400 text-justify">
@@ -245,7 +251,8 @@
         <!-- Perfil 2 -->
         <div
           class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
-          <img src="src/assets/Alonso_2016.jpg" alt="Foto membre 2" class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
+          <img src="src/assets/Alonso_2016.jpg" alt="Foto membre 2"
+            class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
           <h3 class="text-2xl font-bold text-white">Alex Caballe Arasa</h3>
           <p class="text-indigo-300 font-medium mb-4">Dissenyador i desenvolupador web</p>
           <p class="text-gray-400 text-justify">
@@ -268,69 +275,114 @@
       <h1 class="text-2xl font-semibold text-gray-800 lg:text-3xl dark:text-white mb-8">Preguntes freqüents</h1>
 
       <div class="space-y-4">
-        
+
         <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800">
-          <button @click="active = (active === 1 ? null : 1)" class="flex items-center justify-between w-full focus:outline-none">
-            <h2 class="font-semibold text-gray-700 dark:text-white text-left">Quant triga a arribar la meva comanda?</h2>
+          <button @click="active = (active === 1 ? null : 1)"
+            class="flex items-center justify-between w-full focus:outline-none">
+            <h2 class="font-semibold text-gray-700 dark:text-white text-left">Quant triga a arribar la meva comanda?
+            </h2>
             <span class="text-white bg-indigo-600 rounded-full p-1">
-              <svg x-show="active !== 1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              <svg x-show="active === 1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" /></svg>
+              <svg x-show="active !== 1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <svg x-show="active === 1" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+              </svg>
             </span>
           </button>
           <div x-show="active === 1" x-collapse class="mt-4 text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
-            A DecathDam sabem que vols estrenar el teu equipament quan abans. Els enviaments a domicili es realitzen en un termini de <strong>24 a 48 hores laborables</strong> a tota la península. Rebràs un correu amb el seguiment un cop surti del magatzem.
+            A DecathDam sabem que vols estrenar el teu equipament quan abans. Els enviaments a domicili es realitzen en
+            un termini de <strong>24 a 48 hores laborables</strong> a tota la península. Rebràs un correu amb el
+            seguiment un cop surti del magatzem.
           </div>
         </div>
 
         <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800">
-          <button @click="active = (active === 2 ? null : 2)" class="flex items-center justify-between w-full focus:outline-none">
-            <h2 class="font-semibold text-gray-700 dark:text-white text-left">Puc recollir la compra a la botiga física?</h2>
+          <button @click="active = (active === 2 ? null : 2)"
+            class="flex items-center justify-between w-full focus:outline-none">
+            <h2 class="font-semibold text-gray-700 dark:text-white text-left">Puc recollir la compra a la botiga física?
+            </h2>
             <span class="text-white bg-indigo-600 rounded-full p-1">
-              <svg x-show="active !== 2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              <svg x-show="active === 2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" /></svg>
+              <svg x-show="active !== 2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <svg x-show="active === 2" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+              </svg>
             </span>
           </button>
           <div x-show="active === 2" x-collapse class="mt-4 text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
-            I tant! Amb el nostre servei <strong>Click & Collect</strong>, pots fer la reserva online i passar a recollir el teu producte a la botiga en només 1 hora (sempre que hi hagi estoc). És un servei totalment gratuït.
+            I tant! Amb el nostre servei <strong>Click & Collect</strong>, pots fer la reserva online i passar a
+            recollir el teu producte a la botiga en només 1 hora (sempre que hi hagi estoc). És un servei totalment
+            gratuït.
           </div>
         </div>
 
         <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800">
-          <button @click="active = (active === 3 ? null : 3)" class="flex items-center justify-between w-full focus:outline-none">
+          <button @click="active = (active === 3 ? null : 3)"
+            class="flex items-center justify-between w-full focus:outline-none">
             <h2 class="font-semibold text-gray-700 dark:text-white text-left">Quina és la política de devolucions?</h2>
             <span class="text-white bg-indigo-600 rounded-full p-1">
-              <svg x-show="active !== 3" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              <svg x-show="active === 3" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" /></svg>
+              <svg x-show="active !== 3" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <svg x-show="active === 3" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+              </svg>
             </span>
           </button>
           <div x-show="active === 3" x-collapse class="mt-4 text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
-            Tens fins a <strong>60 dies</strong> per retornar qualsevol producte que no hagis utilitzat. Pots fer la devolució gratuïtament a la nostra botiga física o sol·licitar la recollida a domicili des del teu perfil d'usuari.
+            Tens fins a <strong>60 dies</strong> per retornar qualsevol producte que no hagis utilitzat. Pots fer la
+            devolució gratuïtament a la nostra botiga física o sol·licitar la recollida a domicili des del teu perfil
+            d'usuari.
           </div>
         </div>
 
         <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800">
-          <button @click="active = (active === 4 ? null : 4)" class="flex items-center justify-between w-full focus:outline-none">
+          <button @click="active = (active === 4 ? null : 4)"
+            class="flex items-center justify-between w-full focus:outline-none">
             <h2 class="font-semibold text-gray-700 dark:text-white text-left">Quins avantatges té la subscripció?</h2>
             <span class="text-white bg-indigo-600 rounded-full p-1">
-              <svg x-show="active !== 4" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              <svg x-show="active === 4" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" /></svg>
+              <svg x-show="active !== 4" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <svg x-show="active === 4" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+              </svg>
             </span>
           </button>
           <div x-show="active === 4" x-collapse class="mt-4 text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
-            Formar part de DecathDam et dóna accés a ofertes exclusives, acumulació de punts bescanviables per descomptes, accés anticipat a nous productes i invitacions a esdeveniments esportius.
+            Formar part de DecathDam et dóna accés a ofertes exclusives, acumulació de punts bescanviables per
+            descomptes, accés anticipat a nous productes i invitacions a esdeveniments esportius.
           </div>
         </div>
 
         <div class="p-6 bg-gray-100 rounded-lg dark:bg-gray-800">
-          <button @click="active = (active === 5 ? null : 5)" class="flex items-center justify-between w-full focus:outline-none">
+          <button @click="active = (active === 5 ? null : 5)"
+            class="flex items-center justify-between w-full focus:outline-none">
             <h2 class="font-semibold text-gray-700 dark:text-white text-left">Oferiu assessorament tècnic?</h2>
             <span class="text-white bg-indigo-600 rounded-full p-1">
-              <svg x-show="active !== 5" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" /></svg>
-              <svg x-show="active === 5" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" /></svg>
+              <svg x-show="active !== 5" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+              </svg>
+              <svg x-show="active === 5" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 12H6" />
+              </svg>
             </span>
           </button>
           <div x-show="active === 5" x-collapse class="mt-4 text-sm text-gray-500 dark:text-gray-300 leading-relaxed">
-            Sí. El nostre equip està format per apassionats de l'esport que et poden ajudar a triar l'equipament ideal per al teu nivell, tant a la botiga física com a través del nostre xat online.
+            Sí. El nostre equip està format per apassionats de l'esport que et poden ajudar a triar l'equipament ideal
+            per al teu nivell, tant a la botiga física com a través del nostre xat online.
           </div>
         </div>
 
@@ -438,5 +490,3 @@
   // Mostra la primera diapositiva inicialment
   showSlide(current);
 </script>
-
-
