@@ -4,23 +4,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DECATHDAM - Botiga d'esports, equipament i nutrició.">
   <title>DECATHDAM</title>
+  
+  <link rel="preload" as="image" href="/src/assets/deport.webp">
+
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!--Linia per a afegir les rets socials-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'" />
+  
+  <noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </noscript>
+
   <link rel="stylesheet" href="style.css">
 
   <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
-
   <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
-</head>
 
-<!-- FONS SÒLID FOSC -->
+  <style>
+    /* Evita el "flash" de texto invisible */
+    body { font-display: swap; }
+  </style>
+</head>
 
 <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
 
-  <!-- NAVBAR -->
   <nav x-data="{ isOpen: false }" class="relative bg-gray-900 shadow-2xl z-50 border-b border-gray-800">
     <div class="container px-8 py-8 mx-auto md:flex md:justify-between md:items-center">
       <div class="flex items-center justify-between">
@@ -65,26 +74,31 @@
     </div>
   </nav>
 
-  <!-- HERO A PANTALLA COMPLETA AMB SLIDER -->
   <section class="relative h-screen w-full overflow-hidden" id="hero">
-    <!-- Contenidor d’imatges -->
+    
     <div class="absolute inset-0 transition-opacity duration-1000" id="slide1">
-      <img src="/src/assets/deport.webp" alt="Esports" class="w-full h-full object-cover opacity-90"
-        fetchpriority="high" loading="eager">
+      <img src="/src/assets/deport.webp" alt="Esports" 
+           class="w-full h-full object-cover opacity-90"
+           width="1920" height="1080"
+           fetchpriority="high" loading="eager">
     </div>
 
     <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" id="slide2">
-      <img src="/src/assets/equipament.webp" alt="Equipament" class="w-full h-full object-cover opacity-90">
+      <img src="/src/assets/equipament.webp" alt="Equipament" 
+           class="w-full h-full object-cover opacity-90"
+           width="1920" height="1080"
+           loading="lazy">
     </div>
 
     <div class="absolute inset-0 transition-opacity duration-1000 opacity-0" id="slide3">
-      <img src="/src/assets/nutricio_1.webp" alt="Nutrició i Salut" class="w-full h-full object-cover opacity-90">
+      <img src="/src/assets/nutricio_1.webp" alt="Nutrició i Salut" 
+           class="w-full h-full object-cover opacity-90"
+           width="1920" height="1080"
+           loading="lazy">
     </div>
 
-    <!-- Fons amb gradient -->
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-gray-900/90"></div>
 
-    <!-- Text central -->
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-6">
       <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Descobreix DECATHDAM</h1>
       <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">
@@ -96,20 +110,18 @@
       </a>
     </div>
 
-    <!-- Fletxes de navegació -->
     <button id="prevBtn"
-      class="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-indigo-400 transition z-20">
+      class="absolute left-6 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-indigo-400 transition z-20" aria-label="Anterior">
       ❮
     </button>
     <button id="nextBtn"
-      class="absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-indigo-400 transition z-20">
+      class="absolute right-6 top-1/2 transform -translate-y-1/2 text-white text-4xl hover:text-indigo-400 transition z-20" aria-label="Siguiente">
       ❯
     </button>
   </section>
 
 
 
-  <!-- SECCIÓ: CONTINGUT DE LA NOSTRA WEB -->
   <section id="contingut-pagina" class="px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
     <div class="max-w-7xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-white text-center mb-6">Descobreix què trobaràs a DECATHDAM</h2>
@@ -121,7 +133,9 @@
 
         <div x-data="{ open: false }"
           class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
-          <img src="/src/assets/deport.webp" alt="Deports" class="w-full h-36 object-cover rounded-lg mb-4">
+          <img src="/src/assets/deport.webp" alt="Deports" 
+               class="w-full h-36 object-cover rounded-lg mb-4"
+               width="400" height="300" loading="lazy">
           <h3 class="text-xl font-semibold text-white mb-3">Deports</h3>
 
           <button @click="open = !open"
@@ -143,7 +157,9 @@
 
         <div x-data="{ open: false }"
           class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
-          <img src="/src/assets/equipament.webp" alt="Equipament" class="w-full h-36 object-cover rounded-lg mb-4">
+          <img src="/src/assets/equipament.webp" alt="Equipament" 
+               class="w-full h-36 object-cover rounded-lg mb-4"
+               width="400" height="300" loading="lazy">
           <h3 class="text-xl font-semibold text-white mb-3">Equipament</h3>
 
           <button @click="open = !open"
@@ -166,7 +182,8 @@
         <div x-data="{ open: false }"
           class="bg-gray-800 rounded-2xl p-6 shadow-lg flex flex-col items-center text-center">
           <img src="/src/assets/nutricio_1.webp" alt="Nutrició i Salut"
-            class="w-full h-36 object-cover rounded-lg mb-4">
+            class="w-full h-36 object-cover rounded-lg mb-4"
+            width="400" height="300" loading="lazy">
           <h3 class="text-xl font-semibold text-white mb-3">Nutrició i Salut</h3>
 
           <button @click="open = !open"
@@ -194,10 +211,6 @@
   </section>
 
 
-
-
-
-  <!-- SECCIÓ INFORMACIÓ EMPRESA -->
   <section class="px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
     <div class="max-w-5xl mx-auto text-center md:text-left space-y-6">
       <h2 class="text-3xl md:text-4xl font-bold text-white">Sobre la nostra empresa</h2>
@@ -211,15 +224,14 @@
         i un compromís constant amb el medi ambient. Creiem que cada aventura comença amb una bona preparació,
         i volem ser al teu costat en cada pas.
       </p>
-      <!-- IMATGE DE L'EMPRESA -->
       <div class="flex justify-center mt-10">
         <img src="/src/assets/empresa_1.webp" alt="Edifici de l'empresa DECATHDAM"
-          class="rounded-2xl shadow-lg w-full max-w-ld object-cover border border-gray-700" />
+          class="rounded-2xl shadow-lg w-full max-w-ld object-cover border border-gray-700" 
+          width="800" height="500" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- SECCIÓ EQUIP -->
   <section class="px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
     <div class="max-w-6xl mx-auto text-center space-y-10">
       <h2 class="text-3xl md:text-4xl font-bold text-white">Coneix el nostre equip</h2>
@@ -231,11 +243,11 @@
       </p>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-        <!-- Perfil 1 -->
         <div
           class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
           <img src="src/assets/ayrton-senna-perfil.webp" alt="Foto membre 1"
-            class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
+            class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover"
+            width="150" height="150" loading="lazy">
           <h3 class="text-2xl font-bold text-white">Pau Codorniu Duran</h3>
           <p class="text-indigo-300 font-medium mb-4">Dissenyador i desenvolupador web</p>
           <p class="text-gray-400 text-justify">
@@ -249,11 +261,11 @@
           </p>
         </div>
 
-        <!-- Perfil 2 -->
         <div
           class="bg-gray-800 rounded-2xl shadow-lg p-8 flex flex-col items-center text-center hover:scale-105 transition-transform duration-300">
           <img src="src/assets/Alonso_2016.webp" alt="Foto membre 2"
-            class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover">
+            class="w-32 h-32 rounded-full mb-6 border-4 border-indigo-400 object-cover"
+            width="150" height="150" loading="lazy">
           <h3 class="text-2xl font-bold text-white">Alex Caballe Arasa</h3>
           <p class="text-indigo-300 font-medium mb-4">Dissenyador i desenvolupador web</p>
           <p class="text-gray-400 text-justify">
@@ -270,7 +282,6 @@
   </section>
 
 
-  <!--SECCIÓ FAQS-->
   <section id="faqs" class="bg-white dark:bg-gray-900">
     <div x-data="{ active: null }" class="container px-6 py-12 mx-auto">
       <h1 class="text-2xl font-semibold text-gray-800 lg:text-3xl dark:text-white mb-8">Preguntes freqüents</h1>
@@ -392,18 +403,12 @@
   </section>
 
 
-
-
-
-
 </body>
 
 
-<!-- FOOTER -->
 <footer class="bg-gray-950 text-gray-300 py-12 px-8 md:px-20">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
-    <!-- Secció 1: Logo i descripció -->
     <div>
       <h3 class="text-2xl font-bold text-white mb-3">DECATHDAM</h3>
       <p class="text-gray-400 text-justify">
@@ -412,7 +417,6 @@
       </p>
     </div>
 
-    <!-- Secció 2: Contacte -->
     <div>
       <h4 class="text-xl font-semibold text-white mb-3">Contacte</h4>
       <ul class="space-y-2 text-gray-400">
@@ -422,7 +426,6 @@
       </ul>
     </div>
 
-    <!-- Secció 3: Xarxes socials -->
     <div>
       <h4 class="text-xl font-semibold text-white mb-3">Segueix-nos</h4>
       <div class="flex space-x-4">
@@ -439,7 +442,6 @@
 
   </div>
 
-  <!-- Línia separadora -->
   <div
     class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
     <p>© 2025 DECATHDAM. Tots els drets reservats.</p>
@@ -456,7 +458,6 @@
 
 
 
-<!-- SCRIPT DEL SLIDER -->
 <script>
   const slides = [
     document.getElementById("slide1"),
