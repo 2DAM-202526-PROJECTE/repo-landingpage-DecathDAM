@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECATHDAM - Política de Privacitat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <nav x-data="{ isOpen: false }" class="relative bg-gray-900 shadow-2xl z-50 border-b border-gray-800">
+    <div class="container px-8 py-8 mx-auto md:flex md:justify-between md:items-center">
+      <div class="flex items-center justify-between">
+        
+        <a href="index.html" class="text-4xl font-extrabold text-white tracking-wide hover:text-indigo-500 transition-colors duration-300">
+          DECATHDAM
+        </a>
+
+        <div class="flex md:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button"
+            class="text-white hover:text-indigo-400 focus:outline-none transform hover:scale-110 transition duration-200"
+            aria-label="toggle menu">
+            
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 py-6' : 'opacity-0 -translate-x-full']"
+        class="absolute inset-x-0 z-20 w-full px-6 transition-all duration-300 ease-in-out bg-gray-900 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        
+        <div class="flex flex-col md:flex-row md:mx-6 space-y-6 md:space-y-0 md:space-x-10 font-bold text-xl">
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Deport.html">Deport</a>
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Equipament.html">Equipament</a>
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Nutricio.html">Nutrició i salut</a>
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Ofertes.html">Subscripció</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-grow px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-400 mb-6 border-b border-indigo-700 pb-3">
+        Política de Privacitat
+      </h1>
+      <p class="text-sm text-gray-500 mb-10">
+        Darrera actualització: 20 de novembre de 2025
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. Introducció</h2>
+      <p class="mb-6 text-justify leading-relaxed text-gray-300">
+        Aquesta Política de Privacitat descriu com DECATHDAM recopila, utilitza i protegeix la informació que ens proporciones quan utilitzes aquest lloc web. Ens comprometem a garantir la protecció de la teva privacitat.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. Dades que Recopilem</h2>
+      <p class="mb-4 text-justify leading-relaxed text-gray-300">
+        Podem recopilar les següents dades:
+      </p>
+      <ul class="list-disc list-inside ml-4 space-y-2 text-gray-400">
+        <li>**Informació de contacte:** Nom i adreça de correu electrònic (si t'hi subscrius al butlletí o contactes).</li>
+        <li>**Dades d'ús:** Informació sobre com utilitzes el nostre lloc web (pàgines visitades, temps de permanència, tipus de dispositiu, etc.).</li>
+        <li>**Galetes (Cookies):** Petits fitxers que emmagatzemem al teu ordinador per millorar l'experiència de navegació.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Què fem amb les Dades?</h2>
+      <p class="mb-4 text-justify leading-relaxed text-gray-300">
+        La informació que recopilem s'utilitza per:
+      </p>
+      <ul class="list-disc list-inside ml-4 space-y-2 text-gray-400">
+        <li>Millorar els nostres productes i serveis.</li>
+        <li>Enviar correus electrònics promocionals sobre nous productes, ofertes o informació que creiem rellevant (si ens has donat permís).</li>
+        <li>Personalitzar l'experiència al lloc web segons els teus interessos.</li>
+        <li>Garantir la seguretat i prevenir el frau.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Política de Galetes (Cookies)</h2>
+      <p class="mb-6 text-justify leading-relaxed text-gray-300">
+        Utilitzem galetes per analitzar el trànsit web, recordar les teves preferències i millorar la usabilitat. Pots escollir acceptar o rebutjar les galetes. La majoria dels navegadors accepten automàticament les galetes, però pots modificar la configuració del teu navegador per rebutjar-les si ho prefereixes.
+      </p>
+      
+       <h2 class="text-2xl font-bold text-white mt-8 mb-4">5. Enllaços a altres Webs</h2>
+      <p class="mb-6 text-justify leading-relaxed text-gray-300">
+        El nostre lloc web pot contenir enllaços a altres llocs web d'interès. Un cop hagis utilitzat aquests enllaços per sortir de la nostra pàgina, has de tenir en compte que no tenim cap control sobre l'altre lloc web. Per tant, no podem ser responsables de la protecció i privacitat de qualsevol informació que proporcioneu mentre visiteu aquests llocs.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">6. Els Teus Drets</h2>
+      <p class="mb-6 text-justify leading-relaxed text-gray-300">
+        Tens dret a sol·licitar accés, rectificació o supressió de les dades personals que tenim sobre tu. Si vols exercir aquests drets, posa't en contacte amb nosaltres a través de <span class="text-indigo-400">info@decathdam.com</span>.
+      </p>
+
+    </div>
+  </main>
+  <footer class="bg-gray-950 text-gray-300 py-12 px-8 md:px-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+  
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-3">DECATHDAM</h3>
+        <p class="text-gray-400 text-justify">
+          A DECATHDAM treballem per apropar l’esport i la salut a tothom. Ens mou la passió per la innovació,
+          el benestar i la sostenibilitat. Uneix-te a nosaltres i viu el teu camí esportiu amb energia.
+        </p>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-3">Contacte</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><span class="font-semibold text-indigo-300">Email:</span> info@decathdam.com</li>
+          <li><span class="font-semibold text-indigo-300">Telèfon:</span> +34 678 123 456</li>
+          <li><span class="font-semibold text-indigo-300">Adreça:</span> Carrer de l’Esport, 42 - Barcelona</li>
+        </ul>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-3">Segueix-nos</h4>
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com/" alt="facebook" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-facebook text-2xl"></i></a>
+          <a href="https://www.instagram.com/" alt="instagram" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-instagram text-2xl"></i></a>
+          <a href="https://x.com/" alt="twitter" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-twitter text-2xl"></i></a>
+          <a href="https://es.linkedin.com/" alt="linkedin" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-linkedin text-2xl"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div
+      class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+      <p>© 2025 DECATHDAM. Tots els drets reservats.</p>
+      <div class="flex space-x-6 mt-3 md:mt-0">
+        <a href="politica-privacitat.html" class="hover:text-indigo-300 transition">Política de privacitat</a>
+        <a href="politica-cookies.html" class="hover:text-indigo-300 transition">Cookies</a>
+        <a href="termes-us.html" class="hover:text-indigo-300 transition">Termes d’ús</a>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ca" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DECATHDAM - Política de Cookies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
+
+  <nav x-data="{ isOpen: false }" class="relative bg-gray-900 shadow-2xl z-50 border-b border-gray-800">
+    <div class="container px-8 py-8 mx-auto md:flex md:justify-between md:items-center">
+      <div class="flex items-center justify-between">
+        
+        <a href="index.html" class="text-4xl font-extrabold text-white tracking-wide hover:text-indigo-500 transition-colors duration-300">
+          DECATHDAM
+        </a>
+
+        <div class="flex md:hidden">
+          <button x-cloak @click="isOpen = !isOpen" type="button"
+            class="text-white hover:text-indigo-400 focus:outline-none transform hover:scale-110 transition duration-200"
+            aria-label="toggle menu">
+            
+            <svg x-show="!isOpen" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+            </svg>
+
+            <svg x-show="isOpen" xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 py-6' : 'opacity-0 -translate-x-full']"
+        class="absolute inset-x-0 z-20 w-full px-6 transition-all duration-300 ease-in-out bg-gray-900 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center">
+        
+        <div class="flex flex-col md:flex-row md:mx-6 space-y-6 md:space-y-0 md:space-x-10 font-bold text-xl">
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Deport.html">Deport</a>
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Equipament.html">Equipament</a>
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Nutricio.html">Nutrició i salut</a>
+          <a class="text-white transition-colors duration-300 transform hover:text-indigo-500"
+            href="Ofertes.html">Subscripció</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="flex-grow px-8 md:px-20 py-16 bg-gray-900 text-gray-200">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-indigo-400 mb-6 border-b border-indigo-700 pb-3">
+        Política de Cookies
+      </h1>
+      <p class="text-sm text-gray-500 mb-10">
+        Darrera actualització: 20 de novembre de 2025
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. Què són les Cookies?</h2>
+      <p class="mb-6 text-justify leading-relaxed text-gray-300">
+        Una cookie és un petit fitxer de text que s'emmagatzema al teu navegador quan visites el nostre lloc web. La funció de les cookies és permetre que el lloc web recordi informació sobre la teva visita, com les teves preferències o si ja has acceptat l'avís. Això ens ajuda a fer la teva pròxima visita més fàcil i el lloc web més útil.
+      </p>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. Tipus de Cookies a DECATHDAM</h2>
+      <p class="mb-4 text-justify leading-relaxed text-gray-300">
+        A DECATHDAM utilitzem diferents tipus de cookies:
+      </p>
+      <ul class="list-disc list-inside ml-4 space-y-4 text-gray-400">
+        <li>
+            <strong class="text-indigo-300">Cookies Tècniques (Pròpies):</strong> Són estrictament necessàries per al funcionament bàsic del lloc i per recordar les teves preferències. Per exemple, la cookie que recorda la teva acceptació del bàner (`cookiesAccepted`). No requereixen consentiment explícit.
+        </li>
+        <li>
+            <strong class="text-indigo-300">Cookies d'Anàlisi (De Tercers):</strong> Són tractades per nosaltres o per tercers (com Google Analytics) i ens permeten quantificar el nombre d'usuaris i així realitzar la medició i anàlisi estadística de l'ús que fan els usuaris del servei ofert.
+        </li>
+        <li>
+            <strong class="text-indigo-300">Cookies de Publicitat (De Tercers):</strong> S'utilitzen per rastrejar els visitants en les pàgines web amb la intenció de mostrar anuncis rellevants i atractius per a l'usuari individual.
+        </li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Gestió de Cookies</h2>
+      <p class="mb-6 text-justify leading-relaxed text-gray-300">
+        Pots permetre, bloquejar o eliminar les cookies instal·lades al teu equip mitjançant la configuració de les opcions del navegador que utilitzes. Tingues en compte que si desactives les cookies, el nostre lloc web podria no funcionar correctament en algunes àrees.
+      </p>
+      
+    </div>
+  </main>
+  <footer class="bg-gray-950 text-gray-300 py-12 px-8 md:px-20">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+  
+      <div>
+        <h3 class="text-2xl font-bold text-white mb-3">DECATHDAM</h3>
+        <p class="text-gray-400 text-justify">
+          A DECATHDAM treballem per apropar l’esport i la salut a tothom. Ens mou la passió per la innovació,
+          el benestar i la sostenibilitat. Uneix-te a nosaltres i viu el teu camí esportiu amb energia.
+        </p>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-3">Contacte</h4>
+        <ul class="space-y-2 text-gray-400">
+          <li><span class="font-semibold text-indigo-300">Email:</span> info@decathdam.com</li>
+          <li><span class="font-semibold text-indigo-300">Telèfon:</span> +34 678 123 456</li>
+          <li><span class="font-semibold text-indigo-300">Adreça:</span> Carrer de l’Esport, 42 - Barcelona</li>
+        </ul>
+      </div>
+  
+      <div>
+        <h4 class="text-xl font-semibold text-white mb-3">Segueix-nos</h4>
+        <div class="flex space-x-4">
+          <a href="https://www.facebook.com/" alt="facebook" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-facebook text-2xl"></i></a>
+          <a href="https://www.instagram.com/" alt="instagram" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-instagram text-2xl"></i></a>
+          <a href="https://x.com/" alt="twitter" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-twitter text-2xl"></i></a>
+          <a href="https://es.linkedin.com/" alt="linkedin" class="text-gray-400 hover:text-indigo-400 transition"><i
+              class="fab fa-linkedin text-2xl"></i></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <div
+      class="border-t border-gray-700 mt-10 pt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-500">
+      <p>© 2025 DECATHDAM. Tots els drets reservats.</p>
+      <div class="flex space-x-6 mt-3 md:mt-0">
+        <a href="politica-privacitat.html" class="hover:text-indigo-300 transition">Política de privacitat</a>
+        <a href="politica-cookies.html" class="hover:text-indigo-300 transition">Cookies</a>
+        <a href="termes-us.html" class="hover:text-indigo-300 transition">Termes d’ús</a>
+      </div>
+    </div>
+  </footer>
+  </body>
+
+</html>

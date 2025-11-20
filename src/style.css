@@ -70,3 +70,6 @@ html { scroll-behavior: smooth; }
 [x-cloak] { 
   display: none !important; 
 }
+
+/* Evita el "flash" de texto invisible */
+body { font-display: swap; }
